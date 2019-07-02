@@ -1,4 +1,4 @@
-This repository contains code and files for the study:
+This repository contains original code and files for the study:
 
 "Swift Evolutionary Response of Microbes to Historical Rise in Anthropogenic Mercury in the Northern Hemisphere",
 by Matti O. Ruuskanen, Stéphane Aris-Brosou, and Alexandre J. Poulain
@@ -21,7 +21,7 @@ by Matti O. Ruuskanen, Stéphane Aris-Brosou, and Alexandre J. Poulain
 			- Summary of samples: "merA_samples.txt" and "rpoB_samples.txt"
 			- Collection of sequences used in chimera detection: "merA_614_all_curated_filtered.fasta" and "rpoB_out_90.fa"
 			- Hidden Markov Models used in QC of the sequences: "merA_614_all.hmm" and "RNA_pol_Rpb2_45.hmm"
-			- Custom accessory programs used in the pipelines: "uc_to_otu_table.py", "transpose_table" and "swarm_construct_otu_table.R"
+			- Custom accessory programs used in the pipelines: "uc_to_otu_table.py", and "swarm_construct_otu_table.R"
 
 3. Analysis script and related input files
 	- Main analysis script run with R and its input files
