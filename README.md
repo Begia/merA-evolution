@@ -12,7 +12,7 @@ by Matti O. Ruuskanen, Stéphane Aris-Brosou, and Alexandre J. Poulain
 	- Filenames: "Dating_profiles_*SITE*_*YEAR*.xlsx"
 	- Data summarized in "Core_dating_raw_data.csv"
 
-3. High-throughput sequence data processing
+2. High-throughput sequence data processing
 	- Scripts that were run on the CAC cluster to produce the primary data from Illumina read files
 	- Folder: "sequence_processing"
 	- Filenames 
@@ -23,7 +23,7 @@ by Matti O. Ruuskanen, Stéphane Aris-Brosou, and Alexandre J. Poulain
 			- Hidden Markov Models used in QC of the sequences: "merA_614_all.hmm" and "RNA_pol_Rpb2_45.hmm"
 			- Custom accessory programs used in the pipelines: "uc_to_otu_table.py", "transpose_table" and "swarm_construct_otu_table.R"
 
-4. Analysis script and related input files
+3. Analysis script and related input files
 	- Main analysis script run with R and its input files
 	- Folder: "analysis_and_input_files"
 	- Filenames
@@ -42,7 +42,7 @@ by Matti O. Ruuskanen, Stéphane Aris-Brosou, and Alexandre J. Poulain
 				- Clackett et al. 2018; tree-ring tot-Hg data: "Clackett_Hg_data.csv"
 				- Thienpoint et al. 2016; tot-Hg data from Pocket Lake for dating cross-comparison: "Pocket_lake_core_2014_THg_dating_data.csv"
 
-5. Evolutionary analyses
+4. Evolutionary analyses
 	- Files related to the Bayesian analysis of molecular sequences using MCMC ran with BEAST 1.8.0
 	- Folder: "evolutionary_analyses"
 	- Filenames:
