@@ -945,8 +945,8 @@ image <- ggplot(data = pd_continuous_data, aes(x=value, y=Median, color=factor(r
   theme(strip.text.x = element_text(size = 16), axis.title.y = element_text(size = 16), legend.position = "none") + scale_color_manual(values=rep("purple",10))
 ggsave(file = "E:/merA_2018/results/merA_pd_continuous.svg", plot=image, units="mm", width=400, height=200)
 
-image <- ggplot(data = Clackett_data, aes(x=value, y=Median, color=factor(rep))) +
-  geom_line(aes(x=Time, y=smooth), colour="orange", size=2) +
+image <- ggplot(data = Clackett_data, aes(x=Time, y=smooth)) +
+  geom_line(colour="orange", size=2) +
   geom_vline(data=seg_time_lines, aes(xintercept = value, linetype = linetype), color="royalblue3", size=0.5) +
   labs(y="Smoothed tree ring [THg]", x="") + scale_linetype_manual(values=c("dotted", "twodash")) +
   theme(strip.text.x = element_text(size = 16), axis.title.y = element_text(size = 16), legend.position = "none") +
@@ -1013,6 +1013,19 @@ image <- ggplot(data = pd_continuous_data, aes(x=value, y=Median, color=factor(r
   labs(y="Predicted effective population size", x="") + scale_linetype_manual(values=c("dotted", "twodash")) +
   theme(strip.text.x = element_text(size = 16), axis.title.y = element_text(size = 16), legend.position = "none") + scale_color_manual(values=rep("#99566b",10))
 ggsave(file = "E:/merA_2018/results/rpoB_pd_continuous.svg", plot=image, units="mm", width=400, height=200)
+
+#Historical CO2 data from https://doi.org/10.5194/gmd-10-2057-2017
+
+Meinshausen_data <- read.csv("E:/merA_2018/Meinshausen_CO2_data.csv")
+colnames(Meinshausen_data) <- c("Time", "Global", "Northern_hemisphere", "Southern_hemisphere")
+
+image <- ggplot(data = Meinshausen_data, aes(x=Time, y=Northern_hemisphere*1000)) + #easiest fix to make the area the same size as in the rpoB plot is to make the labels as long by multiplying them by 1000.
+  geom_line(colour="turquoise3", size=2) +
+  geom_vline(data=seg_time_lines, aes(xintercept = value, linetype = linetype), color="royalblue3", size=0.5) +
+  labs(y="Northern hemispheric CO2 (ppm)", x="") + scale_linetype_manual(values=c("dotted", "twodash")) +
+  theme(strip.text.x = element_text(size = 16), axis.title.y = element_text(size = 16), legend.position = "none") +
+  scale_x_continuous(limits=c(1500.041, 2016)) + scale_y_continuous()
+ggsave(file = "E:/merA_2018/results/rpoB_pd_continuous_CO2_plot.svg", plot=image, units="mm", width=400, height=200)
 
 #gather, plot and save categorical variable partial dependency plot
 pd_categorical_data <- do.call(rbind, pd_categorical_data)
