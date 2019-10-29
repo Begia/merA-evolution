@@ -1014,6 +1014,7 @@ image <- ggplot(data = pd_continuous_data, aes(x=value, y=Median, color=factor(r
   theme(strip.text.x = element_text(size = 16), axis.title.y = element_text(size = 16), legend.position = "none") + scale_color_manual(values=rep("#99566b",10))
 ggsave(file = "E:/merA_2018/results/rpoB_pd_continuous.svg", plot=image, units="mm", width=400, height=200)
 
+###As part of the review process, an alternative Figure 4B with pCO2 data was plotted###
 #Historical CO2 data from https://doi.org/10.5194/gmd-10-2057-2017
 
 Meinshausen_data <- read.csv("E:/merA_2018/Meinshausen_CO2_data.csv")
@@ -1026,6 +1027,7 @@ image <- ggplot(data = Meinshausen_data, aes(x=Time, y=Northern_hemisphere*1000)
   theme(strip.text.x = element_text(size = 16), axis.title.y = element_text(size = 16), legend.position = "none") +
   scale_x_continuous(limits=c(1500.041, 2016)) + scale_y_continuous()
 ggsave(file = "E:/merA_2018/results/rpoB_pd_continuous_CO2_plot.svg", plot=image, units="mm", width=400, height=200)
+###Alternative Figure 4B code ends here###
 
 #gather, plot and save categorical variable partial dependency plot
 pd_categorical_data <- do.call(rbind, pd_categorical_data)
