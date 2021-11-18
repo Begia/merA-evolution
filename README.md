@@ -1,7 +1,7 @@
 This repository contains original code and files for the study:
 
 "Swift Evolutionary Response of Microbes to Historical Rise in Anthropogenic Mercury in the Northern Hemisphere",
-by Matti O. Ruuskanen, Stéphane Aris-Brosou, and Alexandre J. Poulain
+by Matti O. Ruuskanen, Stéphane Aris-Brosou, and Alexandre J. Poulain (https://doi.org/10.1038/s41396-019-0563-0).
 
 ## Included files
 
